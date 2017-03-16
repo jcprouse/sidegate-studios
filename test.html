@@ -1,0 +1,46 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/resources/js/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="/resources/js/slick/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="/resources/css/main.css"/>  
+</head>
+<body>
+
+Carosel
+<div class="carosel">
+  <div>
+<img srcset="resources/images/carosel/studio3.jpg" alt="My default image">
+  </div>
+  <div><img srcset="resources/images/carosel/studio.jpg" alt="My default image"></div>
+  <div><img srcset="resources/images/carosel/studio2.jpg" alt="My default image"></div>
+</div>
+
+<script type="text/javascript" src="resources/js/jQuery/jquery-3.1.1.min.js"></script>
+
+<script type="text/javascript" src="resources/js/slick/slick.min.js"></script>
+
+<!--HTML 5 picture -->
+Picture
+<picture>
+  <source srcset="resources/images/carosel/studio.jpg" media="(max-width: 768px)">
+  <source srcset="resources/images/carosel/studio2.jpg">
+  <img srcset="resources/images/carosel/studio3.jpg" alt="My default image">
+</picture>
+
+
+
+<script>
+
+$(document).ready(function(){
+  $('.carosel').slick({
+    speed: 3000,
+slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000
+  });
+});
+
+</script>
+</body>
+</html>
