@@ -31,8 +31,26 @@ body {
   font-weight: bold;
   color: #ffffff; }
 
-.nav li a:hover {
-  background-color: transparent !important; }
+.navbar .navbar-nav li a {
+  color: #eee; }
+  .navbar .navbar-nav li a:hover {
+    color: #eee;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  .navbar .navbar-nav li a:focus {
+    color: #eee;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  .navbar .navbar-nav li a:active {
+    color: #eee;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
 
 /* Slider*/
 .carosel img {
@@ -42,20 +60,51 @@ body {
   border-style: none;
   outline: none; }
 
-.segment {
+.segment-display {
   width: 100%;
-  height: auto;
-  float: left;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
 
-.about {
-  background-color: #ffffff; }
-
-.about h1 {
+.segment-display h1 {
   font-size: 80px;
   font-family: "open-sans-light";
   width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px; }
+
+.segment-display p {
+  font-size: 18px;
+  line-height: 2; }
+
+.segment-about {
+  background-color: #ccc; }
+
+.segment-demo {
+  background-color: #701f1f; }
+
+.segment-demo h1, .segment-demo p {
+  color: #eee; }
+
+.demo-list li {
+  position: relative;
+  font-size: 20px;
+  line-height: 1;
+  color: #ffffff;
+  cursor: pointer; }
+
+.demo-list li::before {
+  content: '\f04b';
+  position: absolute;
+  top: -8px;
+  left: 0px;
+  width: 37px;
+  height: 37px;
+  line-height: 35px;
+  font-size: 14px;
+  border: 1px solid #ffffff;
   text-align: center; }
 
 /* HTML 5 picture*/

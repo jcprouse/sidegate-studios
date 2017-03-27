@@ -10,6 +10,11 @@
   <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap/bootstrap.min.css"/>
 
   <link rel="stylesheet" type="text/css" href="/resources/css/main.css"/>
+
+  <script type="text/javascript" src="resources/js/jQuery/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="resources/js/slick/slick.min.js"></script>
+  <script type="text/javascript" src="resources/js/bootstrap/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -19,7 +24,7 @@
 
   <div class="container-fluid container-main">
 
-
+<div class="container">
   <nav class="navbar">
     <div class="container">
       <ul class="nav navbar-nav">
@@ -29,24 +34,42 @@
       </ul>
     </div>
   </nav>
-
+</div>
 <div class="carosel">
   <div><img srcset="resources/images/carosel/studio3.jpg" alt="My default image"></div>
   <div><img srcset="resources/images/carosel/studio.jpg" alt="My default image"></div>
   <div><img srcset="resources/images/carosel/studio2.jpg" alt="My default image"></div>
 </div>
 
-<script type="text/javascript" src="resources/js/jQuery/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="resources/js/slick/slick.min.js"></script>
-<script type="text/javascript" src="resources/js/bootstrap/bootstrap.min.js"></script>
 
-  <div class="container segment about">
-    <h1>Sidegate Studios</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis a erat nec vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus orci in leo ultricies condimentum. Donec sem diam, molestie et velit eu, vulputate placerat massa. Etiam pulvinar tellus eget leo tincidunt rutrum. Ut ultrices eros lectus, eget cursus nunc malesuada at. Fusce porttitor metus ut nibh imperdiet elementum. Proin id risus eu orci iaculis posuere. Fusce interdum aliquet purus, et lobortis velit pharetra et. Mauris volutpat ipsum nec ipsum malesuada, vel pulvinar odio dignissim. Sed mollis quis lorem eget sodales.
 
-Proin pellentesque hendrerit iaculis. Praesent pellentesque augue in felis rutrum euismod. Duis ac odio feugiat, interdum arcu nec, faucibus arcu. Sed sed orci nec est aliquam fermentum vel id metus. Vestibulum vitae ante neque. Aenean vitae ex et eros congue interdum ac ut nulla. Quisque pharetra ultricies est, vitae ornare nisl rutrum sed. Aliquam porttitor eros finibus interdum posuere. In nec urna orci. Sed malesuada posuere varius. Vestibulum et tincidunt lectus.</p>
+<div class="container-main segment-about">
+  <div class="container">
+    <div class="segment-display">
+      <h1>Sidegate Studios</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis a erat nec vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus orci in leo ultricies condimentum. Donec sem diam, molestie et velit eu, vulputate placerat massa. Etiam pulvinar tellus eget leo tincidunt rutrum. Ut ultrices eros lectus, eget cursus nunc malesuada at. Fusce porttitor metus ut nibh imperdiet elementum. Proin id risus eu orci iaculis posuere. Fusce interdum aliquet purus, et lobortis velit pharetra et. Mauris volutpat ipsum nec ipsum malesuada, vel pulvinar odio dignissim. Sed mollis quis lorem eget sodales.
+
+  Proin pellentesque hendrerit iaculis. Praesent pellentesque augue in felis rutrum euismod. Duis ac odio feugiat, interdum arcu nec, faucibus arcu. Sed sed orci nec est aliquam fermentum vel id metus. Vestibulum vitae ante neque. Aenean vitae ex et eros congue interdum ac ut nulla. Quisque pharetra ultricies est, vitae ornare nisl rutrum sed. Aliquam porttitor eros finibus interdum posuere. In nec urna orci. Sed malesuada posuere varius. Vestibulum et tincidunt lectus.</p>
+    </div>
   </div>
+</div>
 
+<div class="container-main segment-demo">
+  <div class="container">
+    <div class="segment-display">
+      <h1>Demos</h1>
+
+      <ul class="demo-list" data-player-id="player">
+        <li data-src="audio/sound_1.mp3">What Part of Me</li>
+        <li data-src="audio/sound_4.mp3" class="stopped">Back Where I Belong</li>
+        <li data-src="audio/sound_2.mp3">I Feel Love</li>
+        <li data-src="audio/sound_2.mp3">Run Away With Me</li>
+        <li data-src="audio/sound_4.mp3">All Eyes On You</li>
+      </ul>
+
+    </div>
+  </div>
+</div>
 
 </div>
 <script>

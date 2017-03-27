@@ -1,6 +1,11 @@
 $background-colour: #000000;
 $nav-font-colour: #ffffff;
 
+$background-segment-about: #ccc;
+
+$background-segment-demo: #701f1f;
+$background-segment-demo-text: #eee;
+
 @font-face {
   font-family: "kano";
   src: url("/resources/fonts/Kano.otf");
@@ -24,16 +29,51 @@ body {padding:0px; margin:0px; font-family: "kano"; font-size:16px; background-c
 .navbar {position: absolute; z-index:10;}
 .navbar .container {background-color: transparent;}
 .navbar .navbar-nav li a {text-shadow: none; font-weight: bold; color: $nav-font-colour;}
-.nav li a:hover{background-color: transparent !important;}
+
+
+.navbar {
+  .navbar-nav li a {
+    color: #eee;
+    &:hover {
+      color: #eee;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+    &:focus {
+      color: #eee;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+    &:active {
+      color: #eee;
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+}
+
+
+//.nav li a:hover{background-color: transparent !important;}
 /* Slider*/
 .carosel img {width:100%; max-height:700px; height:auto; border-style: none; outline: none;}
 
-.segment{width: 100%; height: auto; float:left; padding-left: 15px; padding-right: 15px;}
+.segment-display{width: 100%; padding-left: 15px; padding-right: 15px; padding-top: 20px; padding-bottom: 20px;}
+.segment-display h1 {font-size: 80px; font-family: "open-sans-light"; width: 100%; text-align: center; font-weight: bold; margin-bottom: 20px;}
+.segment-display p {font-size: 18px; line-height: 2;}
 
-.about {background-color: #ffffff}
-.about h1 {font-size: 80px; font-family: "open-sans-light"; width: 100%; text-align: center;}
+.segment-about {background-color: $background-segment-about}
+.segment-demo {background-color: $background-segment-demo}
+.segment-demo h1, .segment-demo p {color: $background-segment-demo-text}
 
 
+.demo-list li {position:relative; font-size: 20px; line-height: 1; color: #ffffff; cursor: pointer;}
+.demo-list li::before {content: '\f04b'; position: absolute; top: -8px; left:0px; width: 37px; height: 37px; line-height: 35px; font-size: 14px; border:1px solid #ffffff; text-align: center;}
 /* HTML 5 picture*/
 picture {width:100%; max-width: 600px;}
 picture source, picture img {width:100%; max-width: 600px;}
