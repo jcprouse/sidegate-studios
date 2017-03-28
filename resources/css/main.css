@@ -93,10 +93,12 @@ body {
   font-size: 20px;
   line-height: 1;
   color: #ffffff;
-  cursor: pointer; }
+  cursor: pointer;
+  list-style: none; }
 
 .demo-list li::before {
   content: '\f04b';
+  font-family: 'FontAwesome';
   position: absolute;
   top: -8px;
   left: 0px;
