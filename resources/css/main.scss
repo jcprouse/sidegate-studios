@@ -72,8 +72,21 @@ body {padding:0px; margin:0px; font-family: "kano"; font-size:16px; background-c
 .segment-demo h1, .segment-demo p {color: $background-segment-demo-text}
 
 
-.demo-list li {position:relative; font-size: 20px; line-height: 1; color: #ffffff; cursor: pointer; list-style: none;}
-.demo-list li::before {content: '\f04b'; font-family: 'FontAwesome'; position: absolute; top: -8px; left:0px; width: 37px; height: 37px; line-height: 35px; font-size: 14px; border:1px solid #ffffff; text-align: center;}
+.demo-list li {position:relative; font-size: 20px; line-height: 1; color: #ffffff; cursor: pointer; list-style: none; line-height:37px; padding-left:50px;}
+.demo-list li+li {margin-top:20px;}
+.demo-list li::before {content: '\f04b'; font-family: 'FontAwesome'; position: absolute; left:0px; width: 37px; height: 37px; line-height: 35px; font-size: 14px; border:1px solid #ffffff; text-align: center; border-radius: 50%;}
+.demo-list li.play::before {content: '\f04c';}
+
+//.audio-wrapper {position: fixed;bottom: 0; left: 0; right: 0; background-color: blue}
+$audio-control-button-width: 50px;
+.audio-controls {position: fixed;bottom: 0; left: 0; right: 0; width:100%; background-color: green; height:50px;}
+.audio-controls .btn {width:$audio-control-button-width; font-size: 24px; font-family: 'FontAwesome'; float:left;}
+.audio-controls .play::before {content: '\f04b';}
+.audio-controls .details {margin-left: $audio-control-button-width; margin-top:10px;}
+.audio-controls .scrubber {background-color: red; height: 10px;}
+.audio-controls .duration {background-color: yellow; line-height: 30px; height: 30px;}
+
+
 /* HTML 5 picture*/
 picture {width:100%; max-width: 600px;}
 picture source, picture img {width:100%; max-width: 600px;}
