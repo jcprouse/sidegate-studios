@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex" />
+  <script src="resources/js/soundmanager/soundmanager2-nodebug-jsmin.js"></script>
+  <script src="resources/js/soundmanager/bar-ui.js"></script>
+  <link rel="stylesheet" href="resources/css/soundmanager/bar-ui.css" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="/resources/css/slick/slick.css"/>
@@ -8,13 +15,27 @@
 
   <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap/bootstrap-theme.min.css"/>
   <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="/resources/css/font-awesome/font-awesome.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/resources/css/font-awesome/font-awesome.min.css"/>
   <link rel="stylesheet" type="text/css" href="/resources/css/main.css"/>
 
   <script type="text/javascript" src="resources/js/jQuery/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="resources/js/slick/slick.min.js"></script>
   <script type="text/javascript" src="resources/js/bootstrap/bootstrap.min.js"></script>
-<script type="text/javascript" src="resources/js/main.js"></script>
+  <script type="text/javascript" src="resources/js/main.js"></script>
+
+  <style>
+
+  .sm2-bar-ui {
+   font-size: 16px;
+  }
+  .sm2-bar-ui .sm2-main-controls,
+  .sm2-bar-ui .sm2-playlist-drawer {
+   background-color: #2d2d2d;
+  }
+  .sm2-bar-ui .sm2-inline-texture {
+   background: transparent;
+  }
+  </style>
 
 </head>
 <body>
@@ -72,16 +93,91 @@
 </div>
 
 </div>
+
+
+
+
+
+
+<!-- fixed, bottom-aligned, full-width player -->
+
+<div class="sm2-bar-ui full-width fixed">
+
+ <div class="bd sm2-main-controls">
+
+  <div class="sm2-inline-texture"></div>
+  <div class="sm2-inline-gradient"></div>
+
+  <div class="sm2-inline-element sm2-button-element">
+   <div class="sm2-button-bd">
+    <a href="#play" class="sm2-inline-button play-pause">Play / pause</a>
+   </div>
+  </div>
+
+  <div class="sm2-inline-element sm2-inline-status">
+
+   <div class="sm2-playlist">
+    <div class="sm2-playlist-target">
+     <!-- playlist <ul> + <li> markup will be injected here -->
+     <!-- if you want default / non-JS content, you can put that here. -->
+     <noscript><p>JavaScript is required.</p></noscript>
+    </div>
+   </div>
+
+   <div class="sm2-progress">
+    <div class="sm2-row">
+    <div class="sm2-inline-time">0:00</div>
+     <div class="sm2-progress-bd">
+      <div class="sm2-progress-track">
+       <div class="sm2-progress-bar"></div>
+       <div class="sm2-progress-ball"><div class="icon-overlay"></div></div>
+      </div>
+     </div>
+     <div class="sm2-inline-duration">0:00</div>
+    </div>
+   </div>
+
+  </div>
+
+  <div class="sm2-inline-element sm2-button-element sm2-volume">
+   <div class="sm2-button-bd">
+    <span class="sm2-inline-button sm2-volume-control volume-shade"></span>
+    <a href="#volume" class="sm2-inline-button sm2-volume-control">volume</a>
+   </div>
+  </div>
+
+ </div>
+
+ <div class="bd sm2-playlist-drawer sm2-element">
+
+  <div class="sm2-inline-texture">
+   <div class="sm2-box-shadow"></div>
+  </div>
+
+  <div class="sm2-playlist-wrapper">
+    <ul class="sm2-playlist-bd">
+     <li><a href="../audio/test.mp3">Title name here</a></li>
+    </ul>
+  </div>
+
+ </div>
+
+</div>
+
+
+
 <!--div class="audio-wrapper"-->
-  <div class="audio-controls">
+  <!--div class="audio-controls">
     <div class="btn play"></div>
     <div class="details">
     <div class="scrubber"></div>
     <div class="duration">ac</div>
 </div>
   </div>
-  <audio id="audio-player"></audio>
+  <audio id="audio-player"></audio-->
 <!--/div-->
+
+
 <script>
 
 $(document).ready(function(){
