@@ -46,7 +46,7 @@
 
   <div class="container-fluid container-main">
 
-<div class="container">
+<!--div class="container">
   <nav class="navbar">
     <div class="container">
       <ul class="nav navbar-nav">
@@ -56,7 +56,38 @@
       </ul>
     </div>
   </nav>
+</div-->
+
+<div class="container">
+
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
 </div>
+
+
+
 <div class="carosel">
   <div><img srcset="resources/images/carosel/studio3.jpg" alt="My default image"></div>
   <div><img srcset="resources/images/carosel/studio.jpg" alt="My default image"></div>
@@ -69,7 +100,7 @@
   <div class="container">
     <div class="segment-display">
       <h1>Sidegate Studios</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis a erat nec vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus orci in leo ultricies condimentum. Donec sem diam, molestie et velit eu, vulputate placerat massa. Etiam pulvinar tellus eget leo tincidunt rutrum. Ut ultrices eros lectus, eget cursus nunc malesuada at. Fusce porttitor metus ut nibh imperdiet elementum. Proin id risus eu orci iaculis posuere. Fusce interdum aliquet purus, et lobortis velit pharetra et. Mauris volutpat ipsum nec ipsum malesuada, vel pulvinar odio dignissim. Sed mollis quis lorem eget sodales.
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis a erat nec vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus orci in leo ultricies condimentum. Donec sem diam, molestie et velit eu, vulputate placerat massa. Etiam pulvinar tellus eget leo tincidunt rutrum. Ut ultrices eros lectus, eget cursus nunc malesuada at. Fusce porttitor metus ut nibh imperdiet elementum. Proin id risus eu orci iaculis posuere. Fusce interdum aliquet purus, et lobortis velit pharetra et. Mauris volutpat ipsum nec ipsum malesuada, vel pulvinar odio dignissim. Sed mollis quis lorem eget sodales.
 
   Proin pellentesque hendrerit iaculis. Praesent pellentesque augue in felis rutrum euismod. Duis ac odio feugiat, interdum arcu nec, faucibus arcu. Sed sed orci nec est aliquam fermentum vel id metus. Vestibulum vitae ante neque. Aenean vitae ex et eros congue interdum ac ut nulla. Quisque pharetra ultricies est, vitae ornare nisl rutrum sed. Aliquam porttitor eros finibus interdum posuere. In nec urna orci. Sed malesuada posuere varius. Vestibulum et tincidunt lectus.</p>
     </div>
@@ -80,14 +111,10 @@
   <div class="container">
     <div class="segment-display">
       <h1>Demos</h1>
-
       <ul class="demo-list" data-player-id="player">
-        <li data-src="audio/test.mp3">Test sound 1</li>
-        <li data-src="audio/test2.m4a">Test sound 2</li>
-        <li data-src="audio/test.mp3">Test sound 3</li>
-
+        <li data-pos="0" onclick="playTrack(this)">Test sound 1</li>
+        <li data-pos="1" onclick="playTrack(this)">Test sound 2</li>
       </ul>
-
     </div>
   </div>
 </div>
@@ -101,7 +128,7 @@
 
 <!-- fixed, bottom-aligned, full-width player -->
 
-<div class="sm2-bar-ui full-width fixed">
+<div class="sm2-bar-ui full-width fixed" id="audio-bar">
 
  <div class="bd sm2-main-controls">
 
@@ -146,6 +173,27 @@
    </div>
   </div>
 
+
+
+
+  <div class="sm2-inline-element sm2-button-element" onclick="closeTrackDisplay()">
+   <div class="sm2-button-bd">
+    <span class="sm2-inline-button sm2-close-button"></span>
+   </div>
+  </div>
+
+
+
+    <!--div class="sm2-inline-element sm2-button-element">
+     <div class="sm2-button-bd">
+      <a href="#play" class="sm2-inline-button play-pause">Play / pause</a>
+     </div>
+   </div-->
+
+
+
+
+
  </div>
 
  <div class="bd sm2-playlist-drawer sm2-element">
@@ -155,8 +203,9 @@
   </div>
 
   <div class="sm2-playlist-wrapper">
-    <ul class="sm2-playlist-bd">
-     <li><a href="../audio/test.mp3">Title name here</a></li>
+    <ul id="sm2-playlist-bd" class="sm2-playlist-bd">
+      <li><a href="../audio/test.mp3">Test sound 1</a></li>
+      <li><a href="../audio/test2.m4a">Test sound 2</a></li>
     </ul>
   </div>
 
@@ -194,7 +243,7 @@ $(document).ready(function(){
     autoplaySpeed: 2000
   });
 
-init();
+//init();
 });
 
 </script>

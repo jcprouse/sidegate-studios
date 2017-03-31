@@ -21,12 +21,15 @@ $background-segment-demo-text: #eee;
   src: url("/resources/fonts/OpenSans-Light.ttf");
 }
 
-body {padding:0px; margin:0px; font-family: "kano"; font-size:16px; background-color: $background-colour;}
+$main-font: helvetica, arial, verdana, sans-serif;
+$main-font-size: 17px;
+
+body {padding:0px; margin:0px; font-family: /*"kano"*/ $main-font; background-color: $background-colour;}
 
 .container-main {padding:0px; margin:0px;}
 
-/* Navigaion */
-.navbar {position: absolute; z-index:10;}
+/* Navigation */
+/*.navbar {position: absolute; z-index:10;}
 .navbar .container {background-color: transparent;}
 .navbar .navbar-nav li a {text-shadow: none; font-weight: bold; color: $nav-font-colour;}
 
@@ -57,7 +60,7 @@ body {padding:0px; margin:0px; font-family: "kano"; font-size:16px; background-c
     }
   }
 }
-
+*/
 
 //.nav li a:hover{background-color: transparent !important;}
 /* Slider*/
@@ -65,27 +68,22 @@ body {padding:0px; margin:0px; font-family: "kano"; font-size:16px; background-c
 
 .segment-display{width: 100%; padding-left: 15px; padding-right: 15px; padding-top: 20px; padding-bottom: 20px;}
 .segment-display h1 {font-size: 80px; font-family: "open-sans-light"; width: 100%; text-align: center; font-weight: bold; margin-bottom: 20px;}
-.segment-display p {font-size: 18px; line-height: 2;}
+.segment-display p {font-size: $main-font-size; line-height: 2;}
 
 .segment-about {background-color: $background-segment-about}
 .segment-demo {background-color: $background-segment-demo}
 .segment-demo h1, .segment-demo p {color: $background-segment-demo-text}
 
 
-.demo-list li {position:relative; font-size: 20px; line-height: 1; color: #ffffff; cursor: pointer; list-style: none; line-height:37px; padding-left:50px;}
+.demo-list li {position:relative; font-size: $main-font-size; line-height: 1; color: #ffffff; cursor: pointer; list-style: none; line-height:37px; padding-left:50px;}
 .demo-list li+li {margin-top:20px;}
 .demo-list li::before {content: '\f04b'; font-family: 'FontAwesome'; position: absolute; left:0px; width: 37px; height: 37px; line-height: 35px; font-size: 14px; border:1px solid #ffffff; text-align: center; border-radius: 50%;}
-.demo-list li.play::before {content: '\f04c';}
+.demo-list li.playing::before {content: '\f04c'; background-color: #ffffff; color: $background-segment-demo; transition: 0.4s}
+.demo-list li.paused::before {content: '\f04b'; background-color: #ffffff; color: $background-segment-demo; transition: 0.4s}
 
-//.audio-wrapper {position: fixed;bottom: 0; left: 0; right: 0; background-color: blue}
-$audio-control-button-width: 50px;
-.audio-controls {position: fixed;bottom: 0; left: 0; right: 0; width:100%; background-color: green; height:50px;}
-.audio-controls .btn {width:$audio-control-button-width; font-size: 24px; font-family: 'FontAwesome'; float:left;}
-.audio-controls .play::before {content: '\f04b';}
-.audio-controls .details {margin-left: $audio-control-button-width; margin-top:10px;}
-.audio-controls .scrubber {background-color: red; height: 10px;}
-.audio-controls .duration {background-color: yellow; line-height: 30px; height: 30px;}
 
+/* Audio Player */
+#audio-bar {display:none;}
 
 /* HTML 5 picture*/
 picture {width:100%; max-width: 600px;}

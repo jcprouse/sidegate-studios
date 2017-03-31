@@ -537,6 +537,13 @@
  background-position: 50% 53%;
 }
 
+/*jprou*/
+.sm2-close-button {
+ background-image: url(/resources/images/soundmanager/icomoon/entypo-25px-ffffff/PNG/squared-cross.png);
+ background-position: 50% 50%;
+ background-size: 46%;
+}
+
 .sm2-volume-control {
  background-image: url(/resources/images/soundmanager/icomoon/entypo-25px-ffffff/PNG/volume.png);
  background-image: none, url(/resources/images/soundmanager/icomoon/entypo-25px-ffffff/SVG/volume.svg);

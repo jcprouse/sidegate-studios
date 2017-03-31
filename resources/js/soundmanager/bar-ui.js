@@ -126,7 +126,7 @@
           players.on[method](exports);
         }
       }
-    }
+      }
 
     function getTime(msec, useString) {
 
@@ -298,40 +298,29 @@
 
           callback('finish');
 
-          // next track?
-          item = playlistController.getNext();
+          //jprou stop at end of track
+          stopTrackDisplay();
+          callback('end');
+
+          /*/ next track?
+          /item = playlistController.getNext();
 
           // don't play the same item over and over again, if at end of playlist etc.
           if (item && playlistController.data.selectedIndex !== lastIndex) {
 
             playlistController.select(item);
-
             setTitle(item);
-
             stopOtherSounds();
-
             // play next
             this.play({
               url: playlistController.getURL()
             });
-
           } else {
-
-            // end of playlist case
-
-            // explicitly stop?
-            // this.stop();
-
             callback('end');
-
-          }
-
+          }*/
         }
-
       });
-
       return sound;
-
     }
 
     function playLink(link) {
@@ -990,6 +979,13 @@ utils.events.add(dom.o, 'ontouchstart', handleMouseDown);
         // TODO: if user pauses + unpauses a sound that had an error, try to play next?
         soundObject.togglePause();
 
+        //jprou
+        if (soundObject.paused){
+          pauseTrackDisplay();
+        }
+        else {
+          playTrackDisplay();
+        }
         // special case: clear "play next" timeout, if one exists.
         // edge case: user pauses after a song failed to load.
         if (soundObject.paused && playlistController.data.timer) {
