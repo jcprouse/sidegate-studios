@@ -1,3 +1,4 @@
+/*Pallete*/
 @font-face {
   font-family: "kano";
   src: url("/resources/fonts/Kano.otf"); }
@@ -17,39 +18,62 @@ body {
   padding: 0px;
   margin: 0px; }
 
+header {
+  background-color: #5D5C61 !important;
+  color: #aeadb2; }
+
+.navbar-default {
+  background-image: none;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  margin-bottom: 0px; }
+
 /* Navigation */
 /*.navbar {position: absolute; z-index:10;}
 .navbar .container {background-color: transparent;}
 .navbar .navbar-nav li a {text-shadow: none; font-weight: bold; color: $nav-font-colour;}
-
-
-.navbar {
-  .navbar-nav li a {
-    color: #eee;
-    &:hover {
-      color: #eee;
-      background-color: transparent;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none;
-    }
-    &:focus {
-      color: #eee;
-      background-color: transparent;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none;
-    }
-    &:active {
-      color: #eee;
-      background-color: transparent;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none;
-    }
-  }
-}
 */
+.navbar-brand {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none; }
+
+.navbar .navbar-nav li a, .navbar .navbar-brand {
+  color: #aeadb2;
+  text-shadow: none; }
+  .navbar .navbar-nav li a:hover, .navbar .navbar-brand:hover {
+    color: #aeadb2;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none; }
+  .navbar .navbar-nav li a:focus, .navbar .navbar-brand:focus {
+    color: #aeadb2;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none; }
+  .navbar .navbar-nav li a:active, .navbar .navbar-brand:active {
+    color: #aeadb2;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none; }
+
+.navbar-toggle {
+  border-color: #aeadb2 !important; }
+
+.icon-bar {
+  background-color: #aeadb2 !important; }
+
+.navbar-collapse {
+  border-color: #aeadb2 !important; }
+
 /* Slider*/
 .carosel img {
   width: 100%;
@@ -66,7 +90,7 @@ body {
   padding-bottom: 20px; }
 
 .segment-display h1 {
-  font-size: 80px;
+  font-size: 30px;
   font-family: "open-sans-light";
   width: 100%;
   text-align: center;
@@ -78,13 +102,14 @@ body {
   line-height: 2; }
 
 .segment-about {
-  background-color: #ccc; }
+  background-color: #938E94;
+  color: #3c373d; }
 
 .segment-demo {
-  background-color: #701f1f; }
+  background-color: #7395AE; }
 
 .segment-demo h1, .segment-demo p {
-  color: #eee; }
+  color: #3d576b; }
 
 .demo-list li {
   position: relative;

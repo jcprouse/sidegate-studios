@@ -6,6 +6,15 @@ $background-segment-about: #ccc;
 $background-segment-demo: #701f1f;
 $background-segment-demo-text: #eee;
 
+
+/*Pallete*/
+$colour-bg-1: #5D5C61;
+$colour-text-1: #aeadb2;
+$colour-bg-2: #938E94;
+$colour-text-2: #3c373d;
+$colour-bg-3: #7395AE;
+$colour-text-3: #3d576b;
+
 @font-face {
   font-family: "kano";
   src: url("/resources/fonts/Kano.otf");
@@ -23,56 +32,69 @@ $background-segment-demo-text: #eee;
 
 $main-font: helvetica, arial, verdana, sans-serif;
 $main-font-size: 17px;
-
+$header-font-size: 30px;
 body {padding:0px; margin:0px; font-family: /*"kano"*/ $main-font; background-color: $background-colour;}
 
 .container-main {padding:0px; margin:0px;}
 
+header {background-color: $colour-bg-1 !important; color: $colour-text-1}
+.navbar-default {background-image: none; background-color: transparent; border: 0; box-shadow: none; margin-bottom:0px;}
 /* Navigation */
 /*.navbar {position: absolute; z-index:10;}
 .navbar .container {background-color: transparent;}
 .navbar .navbar-nav li a {text-shadow: none; font-weight: bold; color: $nav-font-colour;}
-
-
+*/
+.navbar-brand {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow:none;
+}
 .navbar {
-  .navbar-nav li a {
-    color: #eee;
+  .navbar-nav li a, .navbar-brand {
+    color: $colour-text-1;
+    text-shadow: none;
     &:hover {
-      color: #eee;
+      color: $colour-text-1;
       background-color: transparent;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none;
+      text-shadow: none;
     }
     &:focus {
-      color: #eee;
+      color: $colour-text-1;
       background-color: transparent;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none;
+      text-shadow: none;
     }
     &:active {
-      color: #eee;
+      color: $colour-text-1;
       background-color: transparent;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none;
+      text-shadow: none;
     }
   }
 }
-*/
 
+.navbar-toggle {border-color: $colour-text-1 !important}
+.icon-bar {background-color: $colour-text-1 !important}
+.navbar-collapse {border-color: $colour-text-1 !important}
 //.nav li a:hover{background-color: transparent !important;}
 /* Slider*/
 .carosel img {width:100%; max-height:700px; height:auto; border-style: none; outline: none;}
 
 .segment-display{width: 100%; padding-left: 15px; padding-right: 15px; padding-top: 20px; padding-bottom: 20px;}
-.segment-display h1 {font-size: 80px; font-family: "open-sans-light"; width: 100%; text-align: center; font-weight: bold; margin-bottom: 20px;}
+.segment-display h1 {font-size: $header-font-size; font-family: "open-sans-light"; width: 100%; text-align: center; font-weight: bold; margin-bottom: 20px;}
 .segment-display p {font-size: $main-font-size; line-height: 2;}
 
-.segment-about {background-color: $background-segment-about}
-.segment-demo {background-color: $background-segment-demo}
-.segment-demo h1, .segment-demo p {color: $background-segment-demo-text}
+.segment-about {background-color: $colour-bg-2; color: $colour-text-2;}
+.segment-demo {background-color: $colour-bg-3}
+.segment-demo h1, .segment-demo p {color: $colour-text-3;}
 
 
 .demo-list li {position:relative; font-size: $main-font-size; line-height: 1; color: #ffffff; cursor: pointer; list-style: none; line-height:37px; padding-left:50px;}
