@@ -41,7 +41,6 @@
 <body>
 
 
-
   <header>
   <div class="container">
 
@@ -59,9 +58,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
           <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" src="home">Home</a></li>
+            <li><a href="#" src="about">About</a></li>
+            <li><a href="#" src="demo">Soundtracks</a></li>
+            <li><a href="#" src="testimonials">Testimonials</a></li>
           </ul>
         </div>
 
@@ -95,7 +95,6 @@
 </div>
 
 
-
 <div class="container-main segment-about">
   <div class="container">
     <div class="segment-display">
@@ -110,7 +109,7 @@
 <div class="container-main segment-demo">
   <div class="container">
     <div class="segment-display">
-      <h1>Demos</h1>
+      <h1>Soundtracks</h1>
       <ul class="demo-list" data-player-id="player">
         <li data-pos="0" onclick="playTrack(this)">Test sound 1</li>
         <li data-pos="1" onclick="playTrack(this)">Test sound 2</li>
@@ -124,7 +123,7 @@
   <div class="container">
     <div class="segment-display">
       <h1>Testimonials</h1>
-      <p>abc234</p>
+      <p><i>"Hello everyone!"</i><br>Jason Prouse</p>
     </div>
   </div>
 </div>
@@ -254,7 +253,10 @@ $(document).ready(function(){
     autoplaySpeed: 2000
   });
 
-//init();
+  $('.navbar-nav li a').click(function(){
+    var tag = $(".segment-"+$(this).attr("src"));
+    $('html,body').animate({scrollTop: tag.offset().top},'slow');
+  });
 });
 
 </script>
