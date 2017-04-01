@@ -106,10 +106,12 @@ header {
   color: #3c373d; }
 
 .segment-demo {
-  background-color: #7395AE; }
-
-.segment-demo h1, .segment-demo p {
+  background-color: #7395AE;
   color: #3d576b; }
+
+.segment-testimonials {
+  background-color: #557A95;
+  color: #afc9db; }
 
 .demo-list li {
   position: relative;
