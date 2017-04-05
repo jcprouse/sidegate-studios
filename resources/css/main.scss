@@ -16,6 +16,9 @@ $colour-bg-3: #7395AE;
 $colour-text-3: #3d576b;
 $colour-bg-4: #557A95;
 $colour-text-4: #afc9db;
+$colour-bg-5: #B0A295;
+$colour-text-5: #594e46;
+
 
 @font-face {
   font-family: "kano";
@@ -90,19 +93,72 @@ header {background-color: $colour-bg-1 !important; color: $colour-text-1}
 /* Slider*/
 .carosel img {width:100%; max-height:700px; height:auto; border-style: none; outline: none;}
 
-.segment-display{width: 100%; padding-left: 15px; padding-right: 15px; padding-top: 20px; padding-bottom: 20px;}
-.segment-display h1 {font-size: $header-font-size; font-family: "open-sans-light"; width: 100%; text-align: center; font-weight: bold; margin-bottom: 20px;}
+.segment-display{width: 100%; /*padding-left: 15px; padding-right: 15px;*/ padding-top: 20px; padding-bottom: 20px;}
+.segment-display h1 {/*font-size: $header-font-size; font-family: "open-sans-light";*/ width: 100%; text-align: center; /* font-weight: bold;*/ margin-bottom: 20px;}
 .segment-display p {font-size: $main-font-size; line-height: 2;}
 
 .segment-about {background-color: $colour-bg-2; color: $colour-text-2;}
 .segment-demo {background-color: $colour-bg-3; color: $colour-text-3;}
 .segment-testimonials {background-color: $colour-bg-4; color: $colour-text-4;}
+.segment-offer {background-color: $colour-bg-5; color: $colour-text-5;}
+.segment-offer .segment-display {text-align: center;}
 
 .demo-list li {position:relative; font-size: $main-font-size; line-height: 1; color: #ffffff; cursor: pointer; list-style: none; line-height:37px; padding-left:50px;}
 .demo-list li+li {margin-top:20px;}
 .demo-list li::before {content: '\f04b'; font-family: 'FontAwesome'; position: absolute; left:0px; width: 37px; height: 37px; line-height: 35px; font-size: 14px; border:1px solid #ffffff; text-align: center; border-radius: 50%;}
 .demo-list li.playing::before {content: '\f04c'; background-color: #ffffff; color: $background-segment-demo; transition: 0.4s}
 .demo-list li.paused::before {content: '\f04b'; background-color: #ffffff; color: $background-segment-demo; transition: 0.4s}
+
+
+/*.segment-offer .logo {
+    display:block;
+    float:left;
+    padding: 12.5%;
+    width:auto;
+    height:auto;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    background:#eee;
+    text-align:center;
+}*/
+/*.segment-offer .logo span {
+    width: 100%;
+    left: 0;
+    top: 48%;
+    line-height: 1em;
+    height: 1em;
+    font-size: 100%;
+    overflow: hidden;
+}*/
+.segment-offer .logo{
+  margin-bottom: 20px;
+}
+.segment-offer .logo span{
+  position:relative;
+  display:inline-block;
+  text-align:center;
+  color:/*$colour-text-3*/#ffffff;
+  background:$colour-bg-3;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  width:360px;
+  height:360px;
+  line-height:360px;
+  font-size:100px;
+}
+@media (max-width: 1199px) {
+  .segment-offer .logo span{
+    width:294px;height:294px;display:inline-block;font-size:100px;line-height:294px;
+  }
+}
+@media (max-width: 479px) {
+  .segment-offer .logo span{
+    width:280px;
+    height:280px;
+  }
+}
 
 
 /* Audio Player */
