@@ -118,6 +118,10 @@ header {
 .segment-offer .segment-display {
   text-align: center; }
 
+.segment-contact {
+  background-color: #7395AE;
+  color: #3d576b; }
+
 .demo-list li {
   position: relative;
   font-size: 17px;
@@ -184,7 +188,7 @@ header {
   position: relative;
   display: inline-block;
   text-align: center;
-  color: #ffffff;
+  color: #ecc93f;
   background: #7395AE;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -193,6 +197,9 @@ header {
   height: 360px;
   line-height: 360px;
   font-size: 100px; }
+
+.segment-offer .logo p {
+  text-align: left; }
 
 @media (max-width: 1199px) {
   .segment-offer .logo span {
