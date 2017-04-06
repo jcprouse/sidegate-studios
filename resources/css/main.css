@@ -75,13 +75,27 @@ header {
   border-color: #aeadb2 !important; }
 
 /* Slider*/
-.carosel img {
+.carosel div {
+  overflow: hidden;
   width: 100%;
-  max-height: 700px;
-  height: auto;
+  text-align: center;
+  height: 700px;
+  line-height: 700px; }
+
+.carosel div img {
+  height: 700px;
+  max-width: none;
+  margin: -100%;
+  /* width:auto; min-height:700px;max-height:700px; height:auto; */
   border-style: none;
   outline: none; }
 
+@media (min-width: 1049px) {
+  .carosel div img {
+    width: 100%;
+    max-width: none;
+    margin: -100%;
+    height: auto; } }
 .segment-display {
   width: 100%;
   /*padding-left: 15px; padding-right: 15px;*/

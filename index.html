@@ -91,9 +91,10 @@
 
 
 <div class="carosel">
+  <!--div style="overflow:hidden; width:100%; text-align:center; height:700px;"><img style="min-width:100%; max-width:none; height:700px; margin: 0 -100%;" srcset="resources/images/carosel/studio3.jpg" alt="My default image"></div-->
   <div><img srcset="resources/images/carosel/studio3.jpg" alt="My default image"></div>
-  <div><img srcset="resources/images/carosel/studio.jpg" alt="My default image"></div>
-  <div><img srcset="resources/images/carosel/studio2.jpg" alt="My default image"></div>
+  <!--div><img srcset="resources/images/carosel/studio.jpg" alt="My default image"></div>
+  <div><img srcset="resources/images/carosel/studio2.jpg" alt="My default image"></div-->
 </div>
 
 
@@ -279,7 +280,7 @@
 <script>
 
 $(document).ready(function(){
-  $('.carosel').slick({
+  /*$('.carosel').slick({
     accessibility: false,
     draggable:false,
     focusOnSelect:false,
@@ -290,12 +291,23 @@ $(document).ready(function(){
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000
-  });
+  });*/
 
   $('.navbar-nav li a').click(function(){
     var tag = $(".segment-"+$(this).attr("src"));
     $('html,body').animate({scrollTop: tag.offset().top},'slow');
   });
+
+  /*$(window).resize(function(){
+    var windowWidth = $(window).width();
+    var imgSrc = $('#image');
+    if(windowWidth <= 400){
+      imgSrc.attr('src','http://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a');
+    }
+    else if(windowWidth > 400){
+      imgSrc.attr('src','http://i.stack.imgur.com/oURrw.png');
+    }
+  });*/
 });
 
 </script>
