@@ -136,6 +136,21 @@ header {
   background-color: #7395AE;
   color: #3d576b; }
 
+.segment-contact input, .segment-contact textarea {
+  width: 100%; }
+
+.segment-contact textarea {
+  height: 132px;
+  margin-bottom: 15px; }
+
+.segment-contact p {
+  color: #ffffff; }
+
+.segment-footer {
+  background-color: #5D5C61;
+  color: #aeadb2;
+  padding-bottom: 5px !important; }
+
 .demo-list li {
   position: relative;
   font-size: 17px;

@@ -109,6 +109,10 @@ header {background-color: $colour-bg-1 !important; color: $colour-text-1}
 .segment-offer {background-color: $colour-bg-5; color: $colour-text-5;}
 .segment-offer .segment-display {text-align: center;}
 .segment-contact {background-color: $colour-bg-3; color: $colour-text-3;}
+.segment-contact input, .segment-contact textarea {width:100%; }
+.segment-contact textarea {height:132px; margin-bottom:15px;}
+.segment-contact p {color:#ffffff;}
+.segment-footer {background-color: $colour-bg-1; color: $colour-text-1;}
 
 .demo-list li {position:relative; font-size: $main-font-size; line-height: 1; color: #ffffff; cursor: pointer; list-style: none; line-height:37px; padding-left:50px;}
 .demo-list li+li {margin-top:20px;}
